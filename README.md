@@ -1,8 +1,6 @@
 # Personal Finance Coach – Kişisel Finans Takip Uygulaması
 
-# ======================
-#       ENGLISH
-# ======================
+
 
 description_en: >
   Personal Finance Coach is a simple and modern Flutter application that helps you 
@@ -76,9 +74,6 @@ sections_en:
 
 
 
-# ======================
-#        TÜRKÇE
-# ======================
 
 description_tr: >
   Personal Finance Coach, gelir–gider takibi yapmanı, hesaplarını yönetmeni ve harcama 
