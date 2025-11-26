@@ -13,59 +13,55 @@ sections_en:
 
   features:
 
-    transactions:
+  transactions:
       title: "💸 Income & Expense Tracking"
       items:
         - "Add income and expense transactions easily"
         - "Choose and customize categories"
         - "Record transactions per account"
 
-    accounts:
+   accounts:
       title: "🏦 Account Management"
       items:
         - "Add multiple accounts (Cash, Card, Bank, etc.)"
         - "View total balance at a glance"
         - "Scrollable and clean account layout"
 
-    categories:
+   categories:
       title: "🗂️ Categories"
       items:
         - "Default categories: Family, Work, Personal"
         - "Create custom categories"
         - "Emoji-supported visual category list"
 
-    analytics:
+  analytics:
       title: "📊 Spending Analysis"
       items:
         - "Weekly/monthly spending charts"
         - "Category-based distribution"
         - "Income–expense summary page"
 
-    emotions:
+   emotions:
       title: "💬 Emotion Tracking"
       items:
         - "Attach emotion/mood to each transaction"
         - "Analyze spending behavior by mood"
 
-    ui_ux:
+   ui_ux:
       title: "🎨 Modern UI"
       items:
         - "Light & dark theme support"
         - "Responsive and clean design"
         - "Overflow layout issues resolved"
 
-    notifications:
+   notifications:
       title: "🔔 Safe Notification System"
       items:
         - "Android 13+ exact alarm issues handled safely"
         - "App never crashes due to notification errors"
 
   screenshots_title: "📱 Screenshots"
-  screenshots:
-    - "transactions_screen.png"
-    - "accounts_screen.png"
-    - "categories_screen.png"
-    - "analysis_screen.png"
+ <img width="1920" height="1080" alt="Purple Pink Gradient Mobile Application Presentation (2)" src="https://github.com/user-attachments/assets/31d3d173-94db-4c2a-8627-3cb00f3b5191" />
 
   developer_title: "👤 Developer"
   developer:
