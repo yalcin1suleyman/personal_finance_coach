@@ -1,137 +1,103 @@
-# Personal Finance Coach – Kişisel Finans Takip Uygulaması
+# Personal Finance Coach  
+A simple and modern Flutter application that helps you track income & expenses, manage accounts, analyze spending habits, and understand how emotions affect your financial decisions.
+
+---
+
+## 🌟 Features
+
+### 💸 Income & Expense Tracking
+- Add income or expense transactions easily  
+- Choose categories or create your own  
+- Assign each transaction to an account  
+
+### 🏦 Account Management
+- Create multiple accounts (Cash, Card, Bank, etc.)  
+- See your total balance at a glance  
+- Smooth and scrollable account list  
+
+### 🗂️ Categories
+- Default categories included: Family, Work, Personal  
+- Add unlimited custom categories  
+- Emoji-supported visual category view  
+
+### 📊 Spending Analysis
+- Monthly & weekly spending charts  
+- Category-based distribution  
+- Clear income–expense summary  
+
+### 💬 Emotion Tracking
+- Attach your emotion (happy, sad, stressed, etc.) to each transaction  
+- Analyze spending behavior based on how you feel  
+
+### 🎨 Modern UI
+- Light & dark theme  
+- Clean, responsive layout  
+- Overflow and layout issues fixed  
+
+### 🔔 Safe Notification System
+- Android 13+ exact-alarm issues handled safely  
+- App never crashes due to notification errors  
+
+---
+
+## 🖼️ Screenshots
+
+<img width="1920" height="1080" alt="Purple Pink Gradient Mobile Application Presentation (2)" src="https://github.com/user-attachments/assets/9d0f9193-1c28-4c7d-a9d0-52c7723cd4e1" />
 
 
+---
 
-description_en: >
-  Personal Finance Coach is a simple and modern Flutter application that helps you 
-  track your income and expenses, manage multiple accounts, and understand your 
-  spending habits through clean analytics and organized categories.
+## 👤 Developer
+**Süleyman Yalçın**  
+GitHub: https://github.com/yalcin1suleyman
 
-sections_en:
+---
 
-  features_title: "🌟 App Features"
+# 🇹🇷 **Kişisel Finans Koçu**  
+Gelir–gider takibi yapmanı, hesaplarını yönetmeni, harcama alışkanlıklarını analiz etmeni ve duygularının finansal kararlarına etkisini anlamanı sağlayan modern bir Flutter uygulamasıdır.
 
-  features:
+---
 
-  transactions:
-      title: "💸 Income & Expense Tracking"
-      items:
-        - "Add income and expense transactions easily"
-        - "Choose and customize categories"
-        - "Record transactions per account"
+## 🌟 Özellikler
 
-   accounts:
-      title: "🏦 Account Management"
-      items:
-        - "Add multiple accounts (Cash, Card, Bank, etc.)"
-        - "View total balance at a glance"
-        - "Scrollable and clean account layout"
+### 💸 Gelir – Gider Takibi
+- Hızlı gelir/gider ekleme  
+- Kategorileri seçme veya özelleştirme  
+- Her işlemi bir hesaba bağlama  
 
-   categories:
-      title: "🗂️ Categories"
-      items:
-        - "Default categories: Family, Work, Personal"
-        - "Create custom categories"
-        - "Emoji-supported visual category list"
+### 🏦 Hesap Yönetimi
+- Birden fazla hesap oluşturma  
+- Toplam bakiyeyi anlık görme  
+- Kaydırılabilir, düzenli hesap listesi  
 
-  analytics:
-      title: "📊 Spending Analysis"
-      items:
-        - "Weekly/monthly spending charts"
-        - "Category-based distribution"
-        - "Income–expense summary page"
+### 🗂️ Kategoriler
+- Varsayılan kategoriler: Aile, İş, Bireysel  
+- Sınırsız özel kategori ekleme  
+- Emoji destekli kategori görünümü  
 
-   emotions:
-      title: "💬 Emotion Tracking"
-      items:
-        - "Attach emotion/mood to each transaction"
-        - "Analyze spending behavior by mood"
+### 📊 Harcama Analizi
+- Aylık/haftalık harcama grafikleri  
+- Kategori bazlı dağılım  
+- Gelir–gider özeti  
 
-   ui_ux:
-      title: "🎨 Modern UI"
-      items:
-        - "Light & dark theme support"
-        - "Responsive and clean design"
-        - "Overflow layout issues resolved"
+### 💬 Duygu Takibi
+- Her işleme duygu ekleme (mutlu, üzgün, stresli vs.)  
+- Harcama davranışını duyguya göre inceleme  
 
-   notifications:
-      title: "🔔 Safe Notification System"
-      items:
-        - "Android 13+ exact alarm issues handled safely"
-        - "App never crashes due to notification errors"
+### 🎨 Modern Arayüz
+- Aydınlık ve karanlık tema  
+- Temiz, mobil uyumlu tasarım  
+- Overflow ve layout hataları giderildi  
 
-  screenshots_title: "📱 Screenshots"
- <img width="1920" height="1080" alt="Purple Pink Gradient Mobile Application Presentation (2)" src="https://github.com/user-attachments/assets/31d3d173-94db-4c2a-8627-3cb00f3b5191" />
+### 🔔 Güvenli Bildirim Sistemi
+- Android 13+ exact-alarm hatası güvenli şekilde yönetildi  
+- Bildirim hataları uygulamayı ASLA çökertmez  
 
-  developer_title: "👤 Developer"
-  developer:
-    name: "Süleyman Yalçın"
-    github: "https://github.com/yalcin1suleyman"
+---
 
 
+---
 
-
-description_tr: >
-  Personal Finance Coach, gelir–gider takibi yapmanı, hesaplarını yönetmeni ve harcama 
-  alışkanlıklarını daha iyi anlamanı sağlayan basit ve modern bir Flutter uygulamasıdır.
-
-sections_tr:
-
-  features_title: "🌟 Uygulama Özellikleri"
-
-  features:
-
-  transactions:
-      title: "💸 Gelir – Gider Takibi"
-      items:
-        - "Kolay gelir ve gider ekleme"
-        - "Kategori seçme ve düzenleme"
-        - "Hesaba göre işlem kaydetme"
-
-  accounts:
-      title: "🏦 Hesap Yönetimi"
-      items:
-        - "Birden fazla hesap ekleme (Nakit, Kart, Banka vb.)"
-        - "Toplam bakiye görüntüleme"
-        - "Scroll destekli düzenli hesap ekranı"
-
-   categories:
-      title: "🗂️ Kategoriler"
-      items:
-        - "Hazır kategoriler: Aile, İş, Bireysel"
-        - "Yeni kategori ekleme"
-        - "Emoji destekli kategori görünümü"
-
-   analytics:
-      title: "📊 Harcama Analizi"
-      items:
-        - "Aylık/haftalık harcama grafikleri"
-        - "Kategori bazlı harcama dağılımı"
-        - "Gelir–gider özet ekranı"
-
-  emotions:
-      title: "💬 Duygu Takibi"
-      items:
-        - "Her işleme duygu ekleme"
-        - "Duyguya göre harcama analizi"
-
-  ui_ux:
-      title: "🎨 Modern Arayüz"
-      items:
-        - "Aydınlık ve karanlık tema"
-        - "Mobil uyumlu ve temiz görünüm"
-        - "Overflow sorunları giderildi"
-
-  notifications:
-      title: "🔔 Güvenli Bildirim Sistemi"
-      items:
-        - "Android 13+ exact alarm hatası güvenli şekilde yönetildi"
-        - "Bildirim hataları uygulamanın çökmesine neden olmaz"
-
-  screenshots_title: "📱 Ekran Görselleri"
-<img width="1920" height="1080" alt="Purple Pink Gradient Mobile Application Presentation (2)" src="https://github.com/user-attachments/assets/ed180994-df16-42d6-ba3d-747a21e8ed50" />
-
-  developer_title: "👤 Geliştirici"
-  developer:
-    name: "Süleyman Yalçın"
-    github: "https://github.com/yalcin1suleyman"
+## 👤 Geliştirici
+**Süleyman Yalçın**  
+GitHub: https://github.com/yalcin1suleyman
