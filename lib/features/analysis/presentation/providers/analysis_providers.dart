@@ -1,10 +1,11 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:personal_finance_coach/core/enums/mood.dart';
-import 'package:personal_finance_coach/features/analysis/domain/models/analysis_summary.dart';
-import 'package:personal_finance_coach/features/categories/presentation/providers/category_providers.dart';
-import 'package:personal_finance_coach/features/transactions/presentation/providers/transaction_providers.dart';
+
+import '../../../../core/enums/mood.dart';
+import '../../domain/models/analysis_summary.dart';
+import '../../../categories/presentation/providers/category_providers.dart';
+import '../../../transactions/presentation/providers/transaction_providers.dart';
 
 final analysisSummaryProvider = Provider<AsyncValue<AnalysisSummary>>((ref) {
   final transactions = ref.watch(transactionsStreamProvider);
@@ -73,21 +74,34 @@ final analysisSummaryProvider = Provider<AsyncValue<AnalysisSummary>>((ref) {
     return MapEntry<String, double>(categoryName, total);
   });
 
-  final trendFormatter = DateFormat('MMM');
-  final lastSixMonths = List.generate(6, (index) {
-    final date = DateTime(now.year, now.month - index, 1);
-    return DateTime(date.year, date.month);
-  }).reversed;
-  final monthlyTrend = lastSixMonths.map((date) {
-    final monthTx = txList.where((tx) => tx.date.year == date.year && tx.date.month == date.month);
-    final income = monthTx.where((tx) => tx.isIncome).fold<double>(0.0, (sum, tx) => sum + tx.amount);
-    final expense = monthTx.where((tx) => !tx.isIncome).fold<double>(0.0, (sum, tx) => sum + tx.amount);
-    return MonthlyTrendPoint(
-      label: trendFormatter.format(date),
-      income: income,
-      expense: expense,
+  const totalMonths = 60; // keep up to 5 years of monthly data for the range selector.
+  final trendFormatter = DateFormat('MMM yy');
+  final monthlyBuckets = <String, _MonthlyAggregate>{};
+  for (final tx in txList) {
+    final period = DateTime(tx.date.year, tx.date.month);
+    final key = '${period.year}-${period.month}';
+    final bucket = monthlyBuckets.putIfAbsent(key, () => _MonthlyAggregate(period));
+    if (tx.isIncome) {
+      bucket.income += tx.amount;
+    } else {
+      bucket.expense += tx.amount;
+    }
+  }
+
+  final monthlyTrend = <MonthlyTrendPoint>[];
+  for (var i = totalMonths - 1; i >= 0; i--) {
+    final date = DateTime(now.year, now.month - i, 1);
+    final key = '${date.year}-${date.month}';
+    final bucket = monthlyBuckets[key];
+    monthlyTrend.add(
+      MonthlyTrendPoint(
+        period: date,
+        label: trendFormatter.format(date),
+        income: bucket?.income ?? 0,
+        expense: bucket?.expense ?? 0,
+      ),
     );
-  }).toList();
+  }
 
   return AsyncData(
     AnalysisSummary(
@@ -102,4 +116,12 @@ final analysisSummaryProvider = Provider<AsyncValue<AnalysisSummary>>((ref) {
     ),
   );
 });
+
+class _MonthlyAggregate {
+  _MonthlyAggregate(this.period);
+
+  final DateTime period;
+  double income = 0;
+  double expense = 0;
+}
 

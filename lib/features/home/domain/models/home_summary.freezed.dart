@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'dashboard_summary.dart';
+part of 'home_summary.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$DashboardSummary {
+mixin _$HomeSummary {
   double get totalIncome => throw _privateConstructorUsedError;
   double get totalExpense => throw _privateConstructorUsedError;
   double get netBalance => throw _privateConstructorUsedError;
@@ -23,20 +23,22 @@ mixin _$DashboardSummary {
   List<Account> get accounts => throw _privateConstructorUsedError;
   List<FinanceTransaction> get recentTransactions =>
       throw _privateConstructorUsedError;
+  Map<String, double> get categoryDistribution =>
+      throw _privateConstructorUsedError;
   String get currencyCode => throw _privateConstructorUsedError;
 
-  /// Create a copy of DashboardSummary
+  /// Create a copy of HomeSummary
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DashboardSummaryCopyWith<DashboardSummary> get copyWith =>
+  $HomeSummaryCopyWith<HomeSummary> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DashboardSummaryCopyWith<$Res> {
-  factory $DashboardSummaryCopyWith(
-          DashboardSummary value, $Res Function(DashboardSummary) then) =
-      _$DashboardSummaryCopyWithImpl<$Res, DashboardSummary>;
+abstract class $HomeSummaryCopyWith<$Res> {
+  factory $HomeSummaryCopyWith(
+          HomeSummary value, $Res Function(HomeSummary) then) =
+      _$HomeSummaryCopyWithImpl<$Res, HomeSummary>;
   @useResult
   $Res call(
       {double totalIncome,
@@ -45,20 +47,21 @@ abstract class $DashboardSummaryCopyWith<$Res> {
       double totalEffortHours,
       List<Account> accounts,
       List<FinanceTransaction> recentTransactions,
+      Map<String, double> categoryDistribution,
       String currencyCode});
 }
 
 /// @nodoc
-class _$DashboardSummaryCopyWithImpl<$Res, $Val extends DashboardSummary>
-    implements $DashboardSummaryCopyWith<$Res> {
-  _$DashboardSummaryCopyWithImpl(this._value, this._then);
+class _$HomeSummaryCopyWithImpl<$Res, $Val extends HomeSummary>
+    implements $HomeSummaryCopyWith<$Res> {
+  _$HomeSummaryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DashboardSummary
+  /// Create a copy of HomeSummary
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -69,6 +72,7 @@ class _$DashboardSummaryCopyWithImpl<$Res, $Val extends DashboardSummary>
     Object? totalEffortHours = null,
     Object? accounts = null,
     Object? recentTransactions = null,
+    Object? categoryDistribution = null,
     Object? currencyCode = null,
   }) {
     return _then(_value.copyWith(
@@ -96,6 +100,10 @@ class _$DashboardSummaryCopyWithImpl<$Res, $Val extends DashboardSummary>
           ? _value.recentTransactions
           : recentTransactions // ignore: cast_nullable_to_non_nullable
               as List<FinanceTransaction>,
+      categoryDistribution: null == categoryDistribution
+          ? _value.categoryDistribution
+          : categoryDistribution // ignore: cast_nullable_to_non_nullable
+              as Map<String, double>,
       currencyCode: null == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
@@ -105,11 +113,11 @@ class _$DashboardSummaryCopyWithImpl<$Res, $Val extends DashboardSummary>
 }
 
 /// @nodoc
-abstract class _$$DashboardSummaryImplCopyWith<$Res>
-    implements $DashboardSummaryCopyWith<$Res> {
-  factory _$$DashboardSummaryImplCopyWith(_$DashboardSummaryImpl value,
-          $Res Function(_$DashboardSummaryImpl) then) =
-      __$$DashboardSummaryImplCopyWithImpl<$Res>;
+abstract class _$$HomeSummaryImplCopyWith<$Res>
+    implements $HomeSummaryCopyWith<$Res> {
+  factory _$$HomeSummaryImplCopyWith(
+          _$HomeSummaryImpl value, $Res Function(_$HomeSummaryImpl) then) =
+      __$$HomeSummaryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -119,18 +127,19 @@ abstract class _$$DashboardSummaryImplCopyWith<$Res>
       double totalEffortHours,
       List<Account> accounts,
       List<FinanceTransaction> recentTransactions,
+      Map<String, double> categoryDistribution,
       String currencyCode});
 }
 
 /// @nodoc
-class __$$DashboardSummaryImplCopyWithImpl<$Res>
-    extends _$DashboardSummaryCopyWithImpl<$Res, _$DashboardSummaryImpl>
-    implements _$$DashboardSummaryImplCopyWith<$Res> {
-  __$$DashboardSummaryImplCopyWithImpl(_$DashboardSummaryImpl _value,
-      $Res Function(_$DashboardSummaryImpl) _then)
+class __$$HomeSummaryImplCopyWithImpl<$Res>
+    extends _$HomeSummaryCopyWithImpl<$Res, _$HomeSummaryImpl>
+    implements _$$HomeSummaryImplCopyWith<$Res> {
+  __$$HomeSummaryImplCopyWithImpl(
+      _$HomeSummaryImpl _value, $Res Function(_$HomeSummaryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DashboardSummary
+  /// Create a copy of HomeSummary
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -141,9 +150,10 @@ class __$$DashboardSummaryImplCopyWithImpl<$Res>
     Object? totalEffortHours = null,
     Object? accounts = null,
     Object? recentTransactions = null,
+    Object? categoryDistribution = null,
     Object? currencyCode = null,
   }) {
-    return _then(_$DashboardSummaryImpl(
+    return _then(_$HomeSummaryImpl(
       totalIncome: null == totalIncome
           ? _value.totalIncome
           : totalIncome // ignore: cast_nullable_to_non_nullable
@@ -168,6 +178,10 @@ class __$$DashboardSummaryImplCopyWithImpl<$Res>
           ? _value._recentTransactions
           : recentTransactions // ignore: cast_nullable_to_non_nullable
               as List<FinanceTransaction>,
+      categoryDistribution: null == categoryDistribution
+          ? _value._categoryDistribution
+          : categoryDistribution // ignore: cast_nullable_to_non_nullable
+              as Map<String, double>,
       currencyCode: null == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
@@ -178,17 +192,19 @@ class __$$DashboardSummaryImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardSummaryImpl implements _DashboardSummary {
-  const _$DashboardSummaryImpl(
+class _$HomeSummaryImpl implements _HomeSummary {
+  const _$HomeSummaryImpl(
       {required this.totalIncome,
       required this.totalExpense,
       required this.netBalance,
       required this.totalEffortHours,
       required final List<Account> accounts,
       required final List<FinanceTransaction> recentTransactions,
+      required final Map<String, double> categoryDistribution,
       required this.currencyCode})
       : _accounts = accounts,
-        _recentTransactions = recentTransactions;
+        _recentTransactions = recentTransactions,
+        _categoryDistribution = categoryDistribution;
 
   @override
   final double totalIncome;
@@ -215,19 +231,28 @@ class _$DashboardSummaryImpl implements _DashboardSummary {
     return EqualUnmodifiableListView(_recentTransactions);
   }
 
+  final Map<String, double> _categoryDistribution;
+  @override
+  Map<String, double> get categoryDistribution {
+    if (_categoryDistribution is EqualUnmodifiableMapView)
+      return _categoryDistribution;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_categoryDistribution);
+  }
+
   @override
   final String currencyCode;
 
   @override
   String toString() {
-    return 'DashboardSummary(totalIncome: $totalIncome, totalExpense: $totalExpense, netBalance: $netBalance, totalEffortHours: $totalEffortHours, accounts: $accounts, recentTransactions: $recentTransactions, currencyCode: $currencyCode)';
+    return 'HomeSummary(totalIncome: $totalIncome, totalExpense: $totalExpense, netBalance: $netBalance, totalEffortHours: $totalEffortHours, accounts: $accounts, recentTransactions: $recentTransactions, categoryDistribution: $categoryDistribution, currencyCode: $currencyCode)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardSummaryImpl &&
+            other is _$HomeSummaryImpl &&
             (identical(other.totalIncome, totalIncome) ||
                 other.totalIncome == totalIncome) &&
             (identical(other.totalExpense, totalExpense) ||
@@ -239,6 +264,8 @@ class _$DashboardSummaryImpl implements _DashboardSummary {
             const DeepCollectionEquality().equals(other._accounts, _accounts) &&
             const DeepCollectionEquality()
                 .equals(other._recentTransactions, _recentTransactions) &&
+            const DeepCollectionEquality()
+                .equals(other._categoryDistribution, _categoryDistribution) &&
             (identical(other.currencyCode, currencyCode) ||
                 other.currencyCode == currencyCode));
   }
@@ -252,27 +279,28 @@ class _$DashboardSummaryImpl implements _DashboardSummary {
       totalEffortHours,
       const DeepCollectionEquality().hash(_accounts),
       const DeepCollectionEquality().hash(_recentTransactions),
+      const DeepCollectionEquality().hash(_categoryDistribution),
       currencyCode);
 
-  /// Create a copy of DashboardSummary
+  /// Create a copy of HomeSummary
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardSummaryImplCopyWith<_$DashboardSummaryImpl> get copyWith =>
-      __$$DashboardSummaryImplCopyWithImpl<_$DashboardSummaryImpl>(
-          this, _$identity);
+  _$$HomeSummaryImplCopyWith<_$HomeSummaryImpl> get copyWith =>
+      __$$HomeSummaryImplCopyWithImpl<_$HomeSummaryImpl>(this, _$identity);
 }
 
-abstract class _DashboardSummary implements DashboardSummary {
-  const factory _DashboardSummary(
+abstract class _HomeSummary implements HomeSummary {
+  const factory _HomeSummary(
       {required final double totalIncome,
       required final double totalExpense,
       required final double netBalance,
       required final double totalEffortHours,
       required final List<Account> accounts,
       required final List<FinanceTransaction> recentTransactions,
-      required final String currencyCode}) = _$DashboardSummaryImpl;
+      required final Map<String, double> categoryDistribution,
+      required final String currencyCode}) = _$HomeSummaryImpl;
 
   @override
   double get totalIncome;
@@ -287,12 +315,14 @@ abstract class _DashboardSummary implements DashboardSummary {
   @override
   List<FinanceTransaction> get recentTransactions;
   @override
+  Map<String, double> get categoryDistribution;
+  @override
   String get currencyCode;
 
-  /// Create a copy of DashboardSummary
+  /// Create a copy of HomeSummary
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardSummaryImplCopyWith<_$DashboardSummaryImpl> get copyWith =>
+  _$$HomeSummaryImplCopyWith<_$HomeSummaryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

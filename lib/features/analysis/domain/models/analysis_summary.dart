@@ -24,6 +24,7 @@ class EffortInsight with _$EffortInsight {
 @freezed
 class MonthlyTrendPoint with _$MonthlyTrendPoint {
   const factory MonthlyTrendPoint({
+    required DateTime period,
     required String label,
     required double income,
     required double expense,
@@ -54,6 +55,7 @@ class AnalysisSummary with _$AnalysisSummary {
         monthlyTrend: const [],
       );
 }
+
 
 
 

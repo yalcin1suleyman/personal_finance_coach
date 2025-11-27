@@ -350,6 +350,7 @@ abstract class _EffortInsight implements EffortInsight {
 
 /// @nodoc
 mixin _$MonthlyTrendPoint {
+  DateTime get period => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
   double get income => throw _privateConstructorUsedError;
   double get expense => throw _privateConstructorUsedError;
@@ -367,7 +368,7 @@ abstract class $MonthlyTrendPointCopyWith<$Res> {
           MonthlyTrendPoint value, $Res Function(MonthlyTrendPoint) then) =
       _$MonthlyTrendPointCopyWithImpl<$Res, MonthlyTrendPoint>;
   @useResult
-  $Res call({String label, double income, double expense});
+  $Res call({DateTime period, String label, double income, double expense});
 }
 
 /// @nodoc
@@ -385,11 +386,16 @@ class _$MonthlyTrendPointCopyWithImpl<$Res, $Val extends MonthlyTrendPoint>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? period = null,
     Object? label = null,
     Object? income = null,
     Object? expense = null,
   }) {
     return _then(_value.copyWith(
+      period: null == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -414,7 +420,7 @@ abstract class _$$MonthlyTrendPointImplCopyWith<$Res>
       __$$MonthlyTrendPointImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String label, double income, double expense});
+  $Res call({DateTime period, String label, double income, double expense});
 }
 
 /// @nodoc
@@ -430,11 +436,16 @@ class __$$MonthlyTrendPointImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? period = null,
     Object? label = null,
     Object? income = null,
     Object? expense = null,
   }) {
     return _then(_$MonthlyTrendPointImpl(
+      period: null == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -455,8 +466,13 @@ class __$$MonthlyTrendPointImplCopyWithImpl<$Res>
 
 class _$MonthlyTrendPointImpl implements _MonthlyTrendPoint {
   const _$MonthlyTrendPointImpl(
-      {required this.label, required this.income, required this.expense});
+      {required this.period,
+      required this.label,
+      required this.income,
+      required this.expense});
 
+  @override
+  final DateTime period;
   @override
   final String label;
   @override
@@ -466,7 +482,7 @@ class _$MonthlyTrendPointImpl implements _MonthlyTrendPoint {
 
   @override
   String toString() {
-    return 'MonthlyTrendPoint(label: $label, income: $income, expense: $expense)';
+    return 'MonthlyTrendPoint(period: $period, label: $label, income: $income, expense: $expense)';
   }
 
   @override
@@ -474,13 +490,14 @@ class _$MonthlyTrendPointImpl implements _MonthlyTrendPoint {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MonthlyTrendPointImpl &&
+            (identical(other.period, period) || other.period == period) &&
             (identical(other.label, label) || other.label == label) &&
             (identical(other.income, income) || other.income == income) &&
             (identical(other.expense, expense) || other.expense == expense));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, label, income, expense);
+  int get hashCode => Object.hash(runtimeType, period, label, income, expense);
 
   /// Create a copy of MonthlyTrendPoint
   /// with the given fields replaced by the non-null parameter values.
@@ -494,10 +511,13 @@ class _$MonthlyTrendPointImpl implements _MonthlyTrendPoint {
 
 abstract class _MonthlyTrendPoint implements MonthlyTrendPoint {
   const factory _MonthlyTrendPoint(
-      {required final String label,
+      {required final DateTime period,
+      required final String label,
       required final double income,
       required final double expense}) = _$MonthlyTrendPointImpl;
 
+  @override
+  DateTime get period;
   @override
   String get label;
   @override

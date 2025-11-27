@@ -1,4 +1,9 @@
+import 'dart:io';
+
+import 'package:flutter/services.dart';
+import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+
 import 'package:personal_finance_coach/core/constants/app_constants.dart';
 import 'package:personal_finance_coach/core/enums/account_type.dart';
 import 'package:personal_finance_coach/core/enums/category_type.dart';
@@ -17,7 +22,12 @@ class HiveManager {
   static Future<void> init() async {
     if (_initialized) return;
 
-    await Hive.initFlutter();
+    try {
+      await Hive.initFlutter();
+    } on MissingPluginException {
+      final tempDir = await Directory.systemTemp.createTemp('pfc_hive_test_');
+      Hive.init(tempDir.path); // Allows widget tests without platform channels.
+    }
     await _registerAdapters();
     await Future.wait([
       Hive.openBox<UserProfile>(AppConstants.hiveProfileBox),
