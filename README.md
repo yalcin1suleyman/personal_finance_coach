@@ -1,6 +1,7 @@
 # Personal Finance Coach  
 A simple and modern Flutter application that helps you track income & expenses, manage accounts, analyze spending habits, and understand how emotions affect your financial decisions.
 
+
 ---
 
 ## 🌟 Features
